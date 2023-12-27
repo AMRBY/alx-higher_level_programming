@@ -3,8 +3,10 @@ def safe_print_list_integers(my_list=[], x=0):
     i = 0
     for value in range(0, x):
         try:
-            print("{:d}".format(my_list[value], end=""))
+            print("{:d}".format(my_list[value]), end="")
             i += 1
-        except (IndexError, ValueError, TypeError):
+        except (ValueError, TypeError):
             pass
+             
+    print("")
     return i
