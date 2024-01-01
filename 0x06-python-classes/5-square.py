@@ -26,6 +26,7 @@ class Square:
     def area(self):
         """"area is a method to calculate an area of a square"""
         return (self.__size * self.__size)
+
     def my_print(self):
         """"my_print is a method to print an area of a square"""
         if self.__size != 0:
@@ -33,4 +34,3 @@ class Square:
                 print(self.__size * '#')
         else:
             print('')
-
