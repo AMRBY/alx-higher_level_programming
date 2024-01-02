@@ -6,7 +6,8 @@ class Square:
     """Square is an empty class
     __init__: method to initialize a parameter
     Attributes:
-        __size: __size of the square"""
+        __size: __size of the square
+        position: is a method to positionate an area of a square"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
@@ -40,7 +41,6 @@ class Square:
 
     @property
     def position(self):
-        """"position is a method to positionate an area of a square"""
         return self.__value
 
     @position.setter
