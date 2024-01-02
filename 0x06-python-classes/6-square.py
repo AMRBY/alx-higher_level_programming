@@ -24,7 +24,6 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        pass
 
     def area(self):
         """"area is a method to calculate an area of a square"""
@@ -39,6 +38,7 @@ class Square:
                 print(self.__size * '#')
         else:
             print('')
+            return
 
     @property
     def position(self):
