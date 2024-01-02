@@ -16,7 +16,7 @@ class Square:
     @property
     def size(self):
         """size of the square"""
-        return self.__size
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -29,7 +29,7 @@ class Square:
     @property
     def position(self):
         """position to locate the position of a square"""
-        return self.__position
+        return (self.__position)
 
     @position.setter
     def position(self, value):
@@ -46,10 +46,6 @@ class Square:
     def my_print(self):
         """"my_print is a method to print an area of a square"""
         if self.__size != 0:
-            """print(self.__position[1] * "\n", end="")
-            for i in range(self.__size):
-                print(self.__position[0] * " ", end="")
-                print(self.__size * '#')"""
             [print("") for i in range(0, self.__position[1])]
             for i in range(0, self.__size):
                 [print(" ", end="") for j in range(0, self.__position[0])]
