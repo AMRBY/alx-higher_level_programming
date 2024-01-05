@@ -12,8 +12,8 @@ class Rectangle:
         Args:
             width: attribute (int)
             height: attribute (int)"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
