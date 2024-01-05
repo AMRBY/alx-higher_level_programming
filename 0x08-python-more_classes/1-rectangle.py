@@ -18,8 +18,9 @@ class Rectangle:
     @property
     def width(self):
         """width is a getter/setter methods
-        self: auto
-        value: int positive"""
+        Args:
+            self: auto
+            value: int positive"""
         return self.__width
 
     @width.setter
@@ -33,8 +34,9 @@ class Rectangle:
     @property
     def height(self):
         """height is a getter/setter methods
-        self: auto
-        value: int positive"""
+        Args:
+            self: auto
+            value: int positive"""
         return self.__height
 
     @height.setter
