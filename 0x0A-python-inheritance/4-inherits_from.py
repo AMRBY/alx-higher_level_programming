@@ -6,7 +6,7 @@
 
 def inherits_from(obj, a_class):
     """print_sorted is a function, it sort a list"""
-    if issubclass(obj, a_class):
+    if isinstance(obj, a_class) and type(obj) != a_class:
         return True
     else:
         return False
