@@ -23,7 +23,11 @@ class Rectangle(BaseGeometry):
     """Rectangle is a class, it sort a list"""
 
     def __init__(self, width, height):
-        """__init__ is a class, it sort a list"""
+        """__init__ is a class, it sort a list
+        args:
+            width: integer
+            height: integer
+        """
         self.__width = width
         self.__height = height
         super().integer_validator("width", self.__width)
