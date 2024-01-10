@@ -12,7 +12,11 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """integer is a class, it sort a list"""
+        """integer is a class, it sort a list
+        args:
+            name: string
+            value: inetger"""
+
         if not type(value) is int:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
