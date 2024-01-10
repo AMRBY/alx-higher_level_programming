@@ -7,8 +7,11 @@
 class BaseGeometry:
     """BaseGeometry is a class, it sort a list"""
     def area(self):
+    """area is a class, it sort a list"""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
+    """integer is a class, it sort a list"""
         if type(self.value) is not int:
             raise TypeError("{} must be an integer".format(name))
         elif value <=0:
