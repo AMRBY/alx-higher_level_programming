@@ -2,6 +2,8 @@
 """this is the base class
 """
 
+import json
+
 
 class Base:
     """ base is a class"""
@@ -15,3 +17,20 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ to_json_string is a function for initialization"""
+        if list_dictionaries != {} and list_dictionaries is not None:
+            return json.dumps(list_dictionaries)
+        else:
+            return "[]"
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ save_to_file is a function for initialization"""
+        for i in list_objs:
+            dictionary = i.to_dictionary()
+            string = i.to_json_string(dictionary)
+            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8') as json_file:
+                json_file.write(string)
