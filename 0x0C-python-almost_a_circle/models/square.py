@@ -41,22 +41,23 @@ class Square(Rectangle):
                 if (i == 0):
                     self.id = arg
                 elif(i == 1):
-                    self.__size = arg
+                    self.width = arg
+                    self.height = arg
                 elif(i == 2):
-                    self.__x = arg
+                    self.x = arg
                 elif(i == 3):
-                    self.__y = arg
+                    self.y = arg
                 i += 1
         else:
             for key in kwargs:
                 if(key == "id"):
                     self.id = kwargs[key]
                 if(key == "size"):
-                    self.__size = kwargs[key]
+                    self.size = kwargs[key]
                 if(key == "x"):
-                    self.__x = kwargs[key]
+                    self.x = kwargs[key]
                 if(key == "y"):
-                    self.__y = kwargs[key]
+                    self.y = kwargs[key]
 
     def to_dictionary(self):
         """to_dictionary is a getter/setter methods"""
