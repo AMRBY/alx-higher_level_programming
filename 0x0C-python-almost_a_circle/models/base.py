@@ -42,6 +42,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ from_json_string is a function for initialization"""
         if json_string == "" or json_string is None:
             return []
         else:
@@ -49,6 +50,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ create is a function for initialization"""
         if cls.__name__ == "Square":
             obj = cls(1)
         else:
@@ -58,6 +60,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ load_from_file is a function for initialization"""
         path = os.path.isfile(cls.__name__ + '.json')
         print(path)
         if path is False:

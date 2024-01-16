@@ -122,6 +122,7 @@ class Rectangle(Base):
                     self.__y = kwargs[key]
 
     def to_dictionary(self):
+        """to_dictionary is a getter/setter methods"""
         d = {'x': self.__x, 'y': self.__y, 'id': self.id,
              'height': self.__height, 'width': self.__width}
         return d

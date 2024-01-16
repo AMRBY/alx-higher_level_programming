@@ -58,5 +58,6 @@ class Square(Rectangle):
                     self.__y = kwargs[key]
 
     def to_dictionary(self):
+        """to_dictionary is a getter/setter methods"""
         d = {'id': self.id, 'size': self.__size, 'x': self.x, 'y': self.y}
         return d
