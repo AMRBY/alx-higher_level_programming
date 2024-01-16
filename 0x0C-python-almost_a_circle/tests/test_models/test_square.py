@@ -12,6 +12,7 @@ class Testrectangle(unittest.TestCase):
 
 
     def test_value(self):
+        """ Testbase is a class"""
         rec1 = Square(1, 1, 1, 2)
         self.assertEqual(rec1.id, 2)
         self.assertEqual(rec1.width, 1)
@@ -19,6 +20,7 @@ class Testrectangle(unittest.TestCase):
         self.assertEqual(rec1.y, 1)
 
     def test_exceptions(self):
+        """ Testbase is a class"""
         rec1 = Square(1)
         with self.assertRaises(ValueError):
             rec1.width = -1    
@@ -34,6 +36,7 @@ class Testrectangle(unittest.TestCase):
             rec1.height = 1.2  
 
     def test_area(self):
+        """ Testbase is a class"""
         rec2 = Square(2)
         self.assertEqual(rec2.area(), 4)
         rec3 = Square(2)
@@ -41,6 +44,7 @@ class Testrectangle(unittest.TestCase):
         self.assertEqual(rec3.id, rec2.id + 1)
 
     def test_display(self):
+        """ Testbase is a class"""
         rec = Square(2, 1)
         with patch('sys.stdout', new=StringIO()) as capture:
             rec.display()
