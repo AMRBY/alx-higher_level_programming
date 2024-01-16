@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""this is the base class
-"""
-
+"""this is the module defining base class"""
 import json
 import os.path
 
