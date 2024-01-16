@@ -36,8 +36,8 @@ class Base:
         for i in list_objs:
             dictionary = i.to_dictionary()
             string = i.to_json_string(dictionary)
-            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8') 
-            as json_file:
+            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8') \
+                    as json_file:
                 json_file.write(string)
 
     @staticmethod
@@ -66,8 +66,8 @@ class Base:
         if path is False:
             return []
         else:
-            with open(f'{cls.__name__}.json', mode='r', encoding='utf-8')
-            as json_file:
+            with open(f'{cls.__name__}.json', mode='r', encoding='utf-8') \
+                    as json_file:
                 data = cls.from_json_string(json_file.read())
                 return [cls.create(**item) for item in data]
                 output = json_file.read()
