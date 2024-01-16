@@ -36,7 +36,7 @@ class Base:
         for i in list_objs:
             dictionary = i.to_dictionary()
             string = i.to_json_string(dictionary)
-            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8')
+            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8') 
             as json_file:
                 json_file.write(string)
 
