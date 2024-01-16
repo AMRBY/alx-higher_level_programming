@@ -17,7 +17,7 @@ class Square(Rectangle):
         """__init__ is a class that print a square"""
         line1 = str(" - " + str(self.size))
         line2 = str(str(self.x) + "/" + str(self.y))
-        return str("[Rectangle] " + "(" + str(self.id) + ") " + line2 + line1)
+        return str("[Square] " + "(" + str(self.id) + ") " + line2 + line1)
 
     @property
     def size(self):
