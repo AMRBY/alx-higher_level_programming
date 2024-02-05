@@ -33,6 +33,7 @@ class Student:
 
     def reload_from_json(self, json):
         """read_file is a function to read a file"""
-        setattr(self, "first_name", json['first_name'])
-        setattr(self, "last_name", json['last_name'])
-        setattr(self, "age", json['age'])
+        if (json is not None):
+            setattr(self, "first_name", json['first_name'])
+            setattr(self, "last_name", json['last_name'])
+            setattr(self, "age", json['age'])
