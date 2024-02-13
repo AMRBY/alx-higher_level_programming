@@ -1,3 +1,3 @@
---dispaly databases--
---list all databases--
+-- dispaly databases
+-- list all databases
 SELECT databases;
