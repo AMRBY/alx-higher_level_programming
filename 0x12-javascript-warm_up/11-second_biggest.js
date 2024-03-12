@@ -14,5 +14,5 @@ if (argv.length <= 3) {
       c = b;
     }
   }
-  console.log(a, c);
+  console.log(c);
 }
