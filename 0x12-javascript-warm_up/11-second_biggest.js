@@ -1,18 +1,11 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
-if (argv.length <= 3) {
+if (process.argv.length <= 3) {
   console.log('0');
 } else {
-  let c = Number(argv[2]);
-  let a = Number(argv[2]);
-  for (let i = 3; i < argv.length; i++) {
-    const b = Number(argv[i]);
-    if (a < b) {
-      c = a;
-      a = b;
-    } else if (c < b && b !== a) {
-      c = b;
-    }
+  const b = [];
+  for (let i = 2; i < process.argv.length; i++) {
+    b[i - 2] = Number(process.argv[i]);
   }
-  console.log(c);
+  b.sort(function (a, b) { return b - a; });
+  console.log(b[1]);
 }
