@@ -10,9 +10,9 @@ if (argv.length <= 3) {
     if (a < b) {
       c = a;
       a = b;
-    } else if (c < b) {
+    } else if (c < b && b !== a) {
       c = b;
     }
+    console.log(a, c);
   }
-  console.log(c);
 }
