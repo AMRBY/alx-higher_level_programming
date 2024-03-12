@@ -13,6 +13,6 @@ if (argv.length <= 3) {
     } else if (c < b && b !== a) {
       c = b;
     }
-    console.log(a, c);
   }
+    console.log(c);
 }
