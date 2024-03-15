@@ -1,24 +1,31 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Module that list all `states` from the database `hbtn_0e_0_usa`
 """
+from sys import argv
 import MySQLdb
-import sys
 
 
 def main():
     """
-    main function to print states table
+    Connecting to database and retrieving the state names
     """
-    conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    query_rows = cur.fetchall()
-    for row in query_rows:
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
+    )
+
+    cursor = db.cursor()
+
+    cursor.execute("SELECT * FROM states")
+
+    results = cursor.fetchall()
+
+    for row in results:
         print(row)
-    cur.close()
-    conn.close()
 
 
 if __name__ == "__main__":
