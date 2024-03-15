@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that list all `states` from the database `hbtn_0e_0_usa`
+Module that list all `states` starting with 'N' from the database `hbtn_0e_0_usa`
 """
 import MySQLdb
 from sys import argv
