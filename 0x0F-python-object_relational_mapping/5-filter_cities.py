@@ -23,9 +23,10 @@ def main():
     for row in query_rows:
         length = length - 1
         if length == 0:
-            print(row[0])
+            print(row[0], end='')
         else:
             print(row[0], end=", ")
+    print("")
 
     cur.close()
     conn.close()
