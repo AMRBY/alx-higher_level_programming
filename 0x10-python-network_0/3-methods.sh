@@ -1,3 +1,3 @@
 #!/bin/bash
 #display methods
-curl -sX DELETE "$1"
+curl -sX OPTIONS "$1" | grep "Allow" | cut -d" " -f2
