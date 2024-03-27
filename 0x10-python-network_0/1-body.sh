@@ -1,3 +1,3 @@
 #!/bin/bash
 #display body
-curl -sX GET "$1"
+curl -sL "$1"
