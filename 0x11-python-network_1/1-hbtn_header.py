@@ -4,6 +4,6 @@ import urllib.request
 import sys
 
 
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    html = response.method('GET')
+with urllib.request.Request('https://alx-intranet.hbtn.io/status', 'GET') as response:
+    html = response
     print(f"\t- content: {html}")
