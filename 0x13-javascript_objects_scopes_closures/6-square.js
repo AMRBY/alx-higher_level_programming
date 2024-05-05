@@ -9,11 +9,9 @@ module.exports = class SSquare extends Square {
 
   charPrint (c) {
     if (c) {
-      for (let i = 0; i < this.size; i++) {
-        console.log('C'.repeat(this.size));
-      }
+      this.print(c);
     } else {
-      this.print();
+      this.print('X');
     }
   }
 };
