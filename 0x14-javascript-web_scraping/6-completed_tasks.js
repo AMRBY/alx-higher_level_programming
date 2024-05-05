@@ -7,17 +7,13 @@ const dict = {};
 request(argv[2],
   function (error, response, body) {
     if (!error) {
-      for (let j = 1; j < 11; j++) {
-        let nb = 0;
-        for (let i = 0; i < JSON.parse(body).length; i++) {
-          if (JSON.parse(body)[i].userId === j) {
-            if (JSON.parse(body)[i].completed) {
-              nb++;
-            }
-          }
+      for (let i = 0; i < JSON.parse(body).length; i++) {
+        const user = JSON.parse(body)[i].userId;
+        if (!dict[user]) {
+          dict[user] = 0;
         }
-        if (nb !== 0) {
-          dict[j] = nb;
+        if (JSON.parse(body)[i].completed) {
+          dict[user]++;
         }
       }
       console.log(dict);
