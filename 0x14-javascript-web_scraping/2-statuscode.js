@@ -3,6 +3,10 @@
 
 const request = require('request');
 const { argv } = require('node:process');
-
-const req = new Request(request);
-const reponse = fetch(req);
+request(argv[2],
+  function (error, response) {
+    if (!error) {
+      console.log('code:', response.statusCode);
+    }
+  }
+);
