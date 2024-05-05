@@ -16,7 +16,9 @@ request(argv[2],
             }
           }
         }
-        dict[j - 1] = nb;
+        if (nb !== 0) {
+          dict[j] = nb;
+        }
       }
       console.log(dict);
     }
