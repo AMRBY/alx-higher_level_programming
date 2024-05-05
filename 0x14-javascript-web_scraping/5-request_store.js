@@ -7,12 +7,6 @@ const { argv } = require('node:process');
 request(argv[2],
   function (error, response, body) {
     if (!error) {
-      file.writeFile(argv[3], body,
-        function (err) {
-          if (err) {
-            return console.log(err);
-          }
-        });
+      file.writeFile(argv[3], body, function () {});
     }
-  }
-);
+  });
